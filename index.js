@@ -77,4 +77,4 @@ const fs = require('fs');
     }
 })();
 
-module.exports = winston;
+module.exports = winston.cnsl;
