@@ -1,0 +1,19 @@
+{
+  "name": "winston-logger-setup",
+  "description": "Logger setup using winston and loggly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sujan Shrestha <shrsujan2007@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "winston": "^2.2.0",
+    "winston-loggly": "^1.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrsujan/winston-logger.git"
+  },
+  "version": "1.0.0"
+}
