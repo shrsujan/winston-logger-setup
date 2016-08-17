@@ -7,7 +7,7 @@ const config = require(rootPath + '/config') || require('./config');
 const fs = require('fs');
 
 (() => {
-    let logDir = config.logFolder || rootPath + '/log/';
+    let logDir = rootPath + config.logFolder || rootPath + '/log/';
     if(!fs.existsSync(logDir)){
         fs.mkdirSync(logDir);
     }
