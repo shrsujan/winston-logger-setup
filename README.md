@@ -77,6 +77,7 @@ log.debug('Response needs modification');
 log.info('Response successfully received');
 log.cloud('IP:' + ip + ' connected');
 ```
+_log.cnsl_ is just the plain old log for console and doesn't get recorded to any file. _log.cloud_ is for the cloud based log. The rest are for their obvious respective log files.
 
 By default, all logs are of their respective levels i.e. _log.error_ logs as an error level to the _error.log_ file. But, in case we need to register an _info_ level to the _error.log_ file, we can use the following statement.
 ```js
