@@ -4,18 +4,20 @@ let winston = require('winston');
 let path = require('path');
 let rootPath = path.resolve('.');
 let fs = require('fs');
-let config = {};
+let config = require('./config');
 
-if(fs.existsSync(rootPath + '/config1.js')){
-    console.log(1);
-    config = require(rootPath + '/config');
-} else {
-    console.log(2);
-    config = require('./config');
+if(fs.existsSync(rootPath + '/config.js')){
+    let userConfig =  require(rootPath + '/config.js');
+    if(userConfig.logLevels){
+        config.logLevels = userConfig.logLevels;
+    }
+    if(userConfig.logFolder){
+        config.logFolder = userConfig.logFolder;
+    }
 }
 
 (() => {
-    let logDir = (config.logFolder)? rootPath + config.logFolder : rootPath + '/log/';
+    let logDir = rootPath + config.logFolder;
     if(!fs.existsSync(logDir)){
         fs.mkdirSync(logDir);
     }
