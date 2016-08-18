@@ -3,8 +3,16 @@
 let winston = require('winston');
 let path = require('path');
 let rootPath = path.resolve('.');
-const config = require(rootPath + '/config') || require('./config');
-const fs = require('fs');
+let fs = require('fs');
+let config = {};
+
+if(fs.existsSync(rootPath + '/config1.js')){
+    console.log(1);
+    config = require(rootPath + '/config');
+} else {
+    console.log(2);
+    config = require('./config');
+}
 
 (() => {
     let logDir = (config.logFolder)? rootPath + config.logFolder : rootPath + '/log/';
