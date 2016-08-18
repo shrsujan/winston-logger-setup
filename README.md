@@ -21,7 +21,7 @@ npm install winston-logger-setup --save
 
 The package looks for a config file in the root folder of the application for configuration settings. If found and if it contains the specified properties that are required for the package, it will use those values, else the default configurations values that are bundled with the package will be used instead.
 An example of config file:
-```bashp
+```js
 module.exports = {
 	logLevels: {
         levels: {
@@ -67,7 +67,7 @@ contains path to the log folder respective from the root folder. The logFolder v
 
 ## Usage
 Basically, it just needs to be imported in order to be used.
-```bash
+```js
 let log = require('winston-logger-setup');
 
 log.cnsl('hello world!!');
@@ -79,7 +79,7 @@ log.cloud('IP:' + ip + ' connected');
 ```
 
 By default, all logs are of their respective levels i.e. _log.error_ logs as an error level to the _error.log_ file. But, in case we need to register an _info_ level to the _error.log_ file, we can use the following statement.
-```bash
+```js
 let log = require('winston-logger-setup');
 
 log.errorLog.info("Oh snap!!");
