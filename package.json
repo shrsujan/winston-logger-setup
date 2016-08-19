@@ -15,5 +15,6 @@
     "type": "git",
     "url": "git+https://github.com/shrsujan/winston-logger.git"
   },
+  "keywords": ["winston", "log", "logger", "loggly", "winston-log", "winston-logger", "winston-loggly", "winston-logger-setup"],
   "version": "1.0.7"
 }
