@@ -19,8 +19,8 @@ npm install winston-logger-setup --save
 
 ## Config
 
-The package looks for a config file in the root folder of the application for configuration settings. If found and if it contains the specified properties that are required for the package, it will use those values, else the default configurations values that are bundled with the package will be used instead.
-An example of config file:
+The package looks for a config-log.js file in the config folder inside root of the application for configuration settings. If found and if it contains the specified properties that are required for the package, it will use those values, else the default configurations values that are bundled with the package will be used instead.
+An example of config-log.js file:
 ```js
 module.exports = {
 	logLevels: {

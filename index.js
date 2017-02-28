@@ -6,8 +6,8 @@ let rootPath = path.resolve('.');
 let fs = require('fs');
 let config = require('./config');
 
-if(fs.existsSync(rootPath + '/config.js')){
-    let userConfig =  require(rootPath + '/config.js');
+if(fs.existsSync(rootPath + '/config/config-log.js')){
+    let userConfig =  require(rootPath + '/config/config-log.js');
     if(userConfig.logLevels){
         config.logLevels = userConfig.logLevels;
     }
